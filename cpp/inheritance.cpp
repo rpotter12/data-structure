@@ -5,7 +5,7 @@ from the user at the keyboard.write the main() function to test the Book and Tap
 asking the user to fill in data with get_data() and then displaying it using put_data()*/
 
 
-#include<istream>
+#include<iostream>
 using namespace std;
 class Publication
 {

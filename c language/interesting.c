@@ -1,3 +1,4 @@
+// got the program on quora
 #include <stdio.h>
 int main()
 {
