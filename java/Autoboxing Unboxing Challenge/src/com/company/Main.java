@@ -25,7 +25,42 @@ public class Main {
         // e.g. check if exists, or does not exist, etc.
         // Think about where you are adding the code to perform certain actions
 
-        Bank bank=new Bank();
-        bank.store("master");
+        Bank bank=new Bank("SBI");
+
+        if(bank.addBranch("Kota")) {
+            System.out.println("Kota branch created");
+        }
+
+        bank.addCustomer("Kota", "abc", 50.05);
+        bank.addCustomer("Kota", "pqr", 175.34);
+        bank.addCustomer("Kota", "xyz", 220.12);
+
+        bank.addBranch("Chandigarh");
+        bank.addCustomer("Chandigarh", "qqq", 150.54);
+
+        bank.addCustomerTransaction("Kota", "abc", 44.22);
+        bank.addCustomerTransaction("Kota", "abc", 12.44);
+        bank.addCustomerTransaction("Kota", "pqr", 1.65);
+
+        bank.listCustomers("Kota", true);
+        bank.listCustomers("Chandigarh", true);
+
+        bank.addBranch("zzz");
+
+        if(!bank.addCustomer("zzz", "lll", 5.53)) {
+            System.out.println("Error zzz branch does not exist");
+        }
+
+        if(!bank.addBranch("Kota")) {
+            System.out.println("Kota branch already exists");
+        }
+
+        if(!bank.addCustomerTransaction("Kota", "ttt", 52.33)) {
+            System.out.println("Customer does not exist at branch");
+        }
+
+        if(!bank.addCustomer("Kota", "abc", 12.21)) {
+            System.out.println("Customer abc already exists");
+        }
     }
 }
