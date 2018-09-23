@@ -24,7 +24,7 @@ public class Main {
 
         LinkedList<Song> playlist=new LinkedList<Song>();
 
-        Album ab=new Album();
+        Album ab=new Album("New Album");
         ab.getdata("let me",3.0);
         ab.getdata("love yourself",4.10);
         ab.getdata("history",3.50);
@@ -58,12 +58,12 @@ public class Main {
             switch(ch)
             {
                 case 1:
-                    System.out.println(playlist.get(i));
+                    System.out.println("Song: "+playlist.get(i).getTitle()+" ,Duration: "+playlist.get(i).getDuration());
                     break;
                 case 2: i++;
                         if(i<5)
                         {
-                            System.out.println(playlist.get(i));
+                            System.out.println("Song: "+playlist.get(i).getTitle()+" ,Duration: "+playlist.get(i).getDuration());
                         }
                         else
                         {
@@ -73,7 +73,7 @@ public class Main {
                 case 3: i--;
                         if(i<=0)
                         {
-                            System.out.println(playlist.get(i));
+                            System.out.println("Song: "+playlist.get(i).getTitle()+" ,Duration: "+playlist.get(i).getDuration());
                         }
                         else
                         {
@@ -81,7 +81,7 @@ public class Main {
                         }
                         break;
                 case 4:
-                    System.out.println("replaying song"+playlist.get(i));
+                    System.out.println("replaying Song: "+playlist.get(i).getTitle()+" ,Duration: "+playlist.get(i).getDuration());
                     break;
                 case 5: quit=true;
                         break;
