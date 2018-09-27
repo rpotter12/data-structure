@@ -1,4 +1,10 @@
 package com.company;
+import series.Fibonacci;
+import series.Fibonacci.*;
+import series.Factorial.*;
+import series.Sum.*;
+
+import java.util.Scanner;
 
 public class Main {
 
@@ -25,5 +31,18 @@ public class Main {
         //
         // Create a new project and add your Series library, then test the
         // three methods in the main() method of your new project.
+
+        Scanner in=new Scanner(System.in);
+
+        Fibonacci ab=new Fibonacci();
+
+//        int n;
+//        System.out.println("enter the size of array: ");
+//        n=in.nextInt();
+//        int[] a=new int[n];
+
+        //Main ab=new Main();
+        System.out.println(ab.fibonacci(5));
+
     }
 }
