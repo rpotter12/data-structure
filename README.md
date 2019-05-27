@@ -36,5 +36,5 @@ A tree data structure can be defined recursively as a collection of nodes (start
 
 ---
 ## Work to be done in the project
-[] arrange existing codes
-[] programs related to every topic 
+[ ] arrange existing codes
+[ ] programs related to every topic 
