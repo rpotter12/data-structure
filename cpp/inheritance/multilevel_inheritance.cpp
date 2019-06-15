@@ -1,10 +1,3 @@
-/*consider a publishing company that markets both book and audio cassette version to its works.create a class Publications
-that stores the title and price of a publication.Derive the following two classes from above Publication class Book which
-adds a page count and Tape which adds a playing time in minutes. each class should have getdata() function to get its data
-from the user at the keyboard.write the main() function to test the Book and Tape classesby creating instances of them
-asking the user to fill in data with get_data() and then displaying it using put_data()*/
-
-
 #include<iostream>
 using namespace std;
 class Publication
