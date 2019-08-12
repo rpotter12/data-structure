@@ -6,18 +6,6 @@ This Project aims to contains all types of programs of all languages.
 ## Basic Syntax
 Contains the basic syntax of the programming language printing Hello World! program.
 
-## Variable
-A variable in simple terms is a storage place which has some memory allocated to it. Basically, a variable used to store some form of data. Different types of variables require different amounts of memory, and have some specific set of operations which can be applied on them.
-
-## Function
-A function is a block of organized, reusable code that is used to perform a single, related action. Functions provide better modularity for your application and a high degree of code reusing. Funtion is of two types:-
-- Built-in function
-- User defined function
-
-## Class and Object
-Class is an abstract data type and object is it's runtime entity. Class is a user defined data type, which holds its own data members and member functions, which can be accessed and used by creating an instance of that class. A class is like a blueprint for an object. An Object is an instance of a Class. When a class is defined, no memory is allocated but when it is instantiated (i.e. an object is created) memory is allocated.	
-
-
 ## Data Structure
 ### Array
 An array is collection of items stored at contiguous memory locations. The idea is to store multiple items of same type together. This makes it easier to calculate the position of each element by simply adding an offset to a base value, i.e., the memory location of the first element of the array (generally denoted by the name of the array).
