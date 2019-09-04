@@ -1,53 +1,5 @@
 #include<iostream>
 using namespace std;
-
-// linkedlist
-struct List
-{
-    int data;
-    List* next;
-    List* prev;
-};
-void insertionlist(List** head, int data)
-{
-	List* newnode = new List();
-	List* last = *head;
-	newnode->data = data;
-	newnode->next = NULL;
-	if(*head==NULL)
-	{
-		*head=newnode;
-		return;
-	}
-	while(last->next != NULL)
-	{
-		last=last->next;
-	}
-	last->next=newnode;
-}
-List* removeFirstNode(List* head)
-{
-    if (head == NULL)
-        return NULL;
-    List* temp = head;
-    head = head->next;
-    delete temp;
-    return head;
-}
-void printlist(List *node)
-{
-    while (node != NULL)
-    {
-        cout<<" "<<node->data;
-        node = node->next;
-    }
-}
-// linkedlist end
-
-
-
-
-
 // node stucture
 struct Node
 {
@@ -55,11 +7,59 @@ struct Node
     Node* left;
     Node* right;
 };
+void insertionNode(Node** tail, int data)
+{
+	Node* newnode = new Node();
+	Node* last = *tail;
+	newnode->data = data;
+	newnode->right = NULL;
+	if(*tail==NULL)
+	{
+		*tail=newnode;
+		return;
+	}
+	while(last->right != NULL)
+	{
+		last=last->right;
+	}
+	last->right=newnode;
+}
+Node* removeFirstNode(Node* tail)
+{
+    if (tail == NULL)
+        return NULL;
+    Node* temp = tail;
+    tail = tail->right;
+    cout<<temp->data<<" ";
+    delete temp;
+    return tail;
+}
+void printNode(Node *node)
+{
+    while (node != NULL)
+    {
+        cout<<" "<<node->data;
+        node = node->right;
+    }
+}
+// linkedNode end
+
+
+
+
+
+
 
 // function for insertion
 void insertion(Node** head, int data)
 {
 	Node* newnode = new Node();
+	if(newnode==NULL)
+	{
+		cout<<"NODE NOT CREATED";
+		getchar();
+		getchar();
+	}
 	Node* last = *head;
 	newnode->data = data;
 	newnode->left = NULL;
@@ -101,6 +101,7 @@ void insertion(Node** head, int data)
 	}
 }
 
+/*
 void printleft(Node *node)
 {
     while (node != NULL)
@@ -110,37 +111,47 @@ void printleft(Node *node)
     }
 }
 
+void printright(Node *node)
+{
+    while (node != NULL)
+    {
+        cout<<" "<<node->data;
+        node = node->right;
+    }
+}
+*/
+
 // BFS print
-void print(Node* node)
+void helloworl(Node* node)
 {
 	Node* last = NULL;
-	List* head = NULL;
-	List* temp = NULL;
+	Node* tail = NULL;
+	Node* temp3 = NULL;
 	if(node==NULL)
 	{
 		cout<<"no element is present"<<endl;
 		return;
 	}
-	insertionlist(&head,node->data);
-	temp=head;
+	insertionNode(&tail,node->data);
 	last=node;
-	//printlist(head);
+	//printNode(head);
 	while(1)
 	{
 		if(last != NULL)
 		{
-			insertionlist(&head,last->left->data);
-			insertionlist(&head,last->right->data);
-			head = removeFirstNode(head);
-			cout<<head->data<<" ";
-			while(head->data != last->data)
+            if(last->left != NULL)
+                insertionNode(&tail,last->left->data);
+            if(last->right != NULL)
+                insertionNode(&tail,last->right->data);
+			tail = removeFirstNode(tail);
+			while(tail->data != last->data)
 			{
-				if(head->data > last->data)
+				if(tail->data > last->data)
 					last = last->right;
 				else
 					last = last->left;
 			}
-			
+
 		}
 		else
 		{
@@ -149,8 +160,6 @@ void print(Node* node)
 		}
 	}
 }
-
-
 
 // main function
 int main()
@@ -194,7 +203,7 @@ int main()
 
 		else if(choice==2)
 		{
-			printleft(head);
+			helloworl(head);
 		}
 
 		else if(choice==3)
