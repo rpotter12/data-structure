@@ -2,30 +2,30 @@
 #include<bits/stdc++.h>
 using namespace std;
 int s;
-void binarySearch(int arr[],int i, int j)
+int binarySearch(int arr[],int i, int j)
 {
-    int mid=(i+j)/2,flag=0;
-    if(arr[mid]==s)
+    int a=1,b=0;
+    int mid=(i+j)/2;
+    while(i<j)
     {
-        flag++;
+        if(arr[mid]==s)
+        {
+            return a;
+        }
+        if(s>arr[mid])
+        {
+            return binarySearch(arr,mid+1,j);
+        }
+        if(s<arr[mid])
+        {
+            return binarySearch(arr,i,mid);
+        }
     }
-    else if(s>arr[mid])
-    {
-        binarySearch(arr,mid+1,j);
-    }
-    else if(s<arr[mid])
-    {
-        binarySearch(arr,i,mid);
-    }
-    if(flag==0)
-        cout<<"element not found";
-    else
-        cout<<"element found";
-
+    return b;
 }
 int main()
 {
-    int n;
+    int n,result;
     cout<<"enter size of array: ";
     cin>>n;
     int arr[n];
@@ -37,5 +37,9 @@ int main()
     sort(arr,arr+n);
     cout<<"enter element to search: ";
     cin>>s;
-    binarySearch(arr,0,n-1);
+    result=binarySearch(arr,0,n-1);
+    if(result==1)
+        cout<<"element is present";
+    else
+        cout<<"element is not present";
 }
