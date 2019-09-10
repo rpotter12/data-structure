@@ -101,26 +101,6 @@ void insertion(Node** head, int data)
 	}
 }
 
-/*
-void printleft(Node *node)
-{
-    while (node != NULL)
-    {
-        cout<<" "<<node->data;
-        node = node->left;
-    }
-}
-
-void printright(Node *node)
-{
-    while (node != NULL)
-    {
-        cout<<" "<<node->data;
-        node = node->right;
-    }
-}
-*/
-
 // BFS print
 void helloworl(Node* node)
 {
