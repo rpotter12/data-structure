@@ -1,0 +1,44 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+
+class A
+{
+	int a,b,i,g;
+	public :
+		void input()
+		{
+			cout<<"First no. : ";
+			cin>>a;
+			cout<<"Second no. : ";
+			cin>>b;
+		}
+		void gcd()
+		{
+			int z;
+			if(a>b)
+			{
+				z=b;
+			}
+			else
+			{
+				z=a;
+			}
+			for(i=1;i<=z;i++)
+			{
+				if(a%i==0 && b%i==0)
+				{
+					g=i;
+				}
+			}
+			cout<<"GCD of two No.'s is : "<<g;
+			cout<<endl;
+		}
+};
+int main()
+{
+	A oa;
+	oa.input();
+	oa.gcd();
+	return 0;
+}
