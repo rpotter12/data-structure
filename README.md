@@ -1,5 +1,5 @@
 # data-structure
-This Project aims to contains all types of programs of all languages.
+This Project aims to contains all types of programs of the all languages.
 
 ---
 ## Topics
@@ -26,7 +26,7 @@ A tree data structure can be defined recursively as a collection of nodes (start
 - Linear Search
 - Binary Search
 
-## Sorting
+## Sorting Algorithms
 - Bubble Sort
 - Radix Sort
 - Heap Sort
