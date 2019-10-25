@@ -1,5 +1,5 @@
 # data-structure
-This Project aims to contains all types of programs of the all languages.
+This Project Aims to contains all types of programs of the all languages.
 
 ---
 ## Topics
