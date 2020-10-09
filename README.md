@@ -8,4 +8,6 @@ To check your output: `diff your_output_file_location output.txt`
 
 1. Warmup Round
 2. Pattern
+3. Matrix
+4. Recursion
 
