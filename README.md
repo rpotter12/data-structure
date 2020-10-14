@@ -11,4 +11,5 @@ To check your output: `diff your_output_file_location output.txt`
 3. Matrix
 4. Recursion
 5. Dynamic Programming
+6. Sorting And Searching
 
