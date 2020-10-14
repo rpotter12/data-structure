@@ -10,4 +10,5 @@ To check your output: `diff your_output_file_location output.txt`
 2. Pattern
 3. Matrix
 4. Recursion
+5. Dynamic Programming
 
