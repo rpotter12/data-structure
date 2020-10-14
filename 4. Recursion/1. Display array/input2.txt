@@ -1,0 +1,8 @@
+Input the number of elements to be stored in the array: 4
+
+Input 4 elements in the array :
+
+element - 0 : 3
+element - 1 : 2
+element - 2 : 2
+element - 3 : 5
